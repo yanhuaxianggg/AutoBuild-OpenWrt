@@ -76,12 +76,12 @@ jobs:
     - name: Import external feeds
       working-directory: ./openwrt
       run: |
-        git clone https://github.com/lisaac/luci-lib-docker.git package/lisaac
-        git clone https://github.com/lisaac/luci-app-dockerman package/lisaacc
+        git clone https://github.com/lisaac/luci-lib-docker.git package/lisaac/dockerlib
+        git clone https://github.com/lisaac/luci-app-dockerman package/lisaacc/dockerman
         git clone https://github.com/kongfl888/luci-app-adguardhome.git package/kongfl888
-        git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/jerrykuku
+        git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 package/jerrykuku/argon
         git clone https://github.com/xiaorouji/openwrt-package.git package/lienol
-        git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/jerrykuku
+        git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/jerrykuku/jd
 
     - name: Configuration Customization - Build_x86_64
       env:
